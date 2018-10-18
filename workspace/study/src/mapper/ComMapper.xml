@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.nextit.function.service.impl.ComMapper">
+
+<select id="getIpList" parameterType="kr.or.nextit.function.service.CommCodeVo" 
+		resultType="kr.or.nextit.function.service.CommCodeVo">
+
+	SELECT CODE_ID AS KEY,
+		   CODE_NAME AS VALUE
+    FROM 
+    	   TB_COM_CODE 
+    WHERE 
+    	   GROUP_ID = 'IP'
+</select>
+
+<select id="getIpItem" parameterType="kr.or.nextit.function.service.CommCodeVo"
+		resultType="kr.or.nextit.function.service.CommCodeVo">
+
+	SELECT CODE_ID AS KEY,
+		   CODE_NAME AS VALUE
+    FROM 
+    	   TB_COM_CODE 
+    WHERE 
+    	   GROUP_ID = 'IP' AND CODE_ID = #{key}
+</select>
+
+<insert id="insertIpItem" parameterType="kr.or.nextit.function.service.CommCodeVo">
+
+	INSERT INTO
+		TB_COM_CODE (GROUP_ID, CODE_ID, CODE_NAME, REG_DATE) 
+	VALUES 
+		('IP', #{key}, 'D', SYSDATE)
+		
+</insert>
+
+</mapper>
