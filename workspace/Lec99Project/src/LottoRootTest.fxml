@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="384.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LottoRootControllerTest">
+   <top>
+      <AnchorPane prefHeight="67.0" prefWidth="511.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="183.0" layoutY="-10.0" text="Lotto" textFill="#0f5770">
+               <font>
+                  <Font name="Ani" size="65.0" />
+               </font>
+            </Label>
+            <Label layoutX="465.0" layoutY="80.0" text="Input">
+               <font>
+                  <Font name="Symbola" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="59.0" prefWidth="511.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="214.0" layoutY="17.0" mnemonicParsing="false" onAction="#correctNum" text="번호 맞추기" />
+            <Button layoutX="428.0" layoutY="17.0" mnemonicParsing="false" onAction="#clearArea" text="초기화" />
+            <Button layoutX="30.0" layoutY="17.0" mnemonicParsing="false" onAction="#createNum" text="로또 번호 생성" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="inputNum" prefHeight="0.0" prefWidth="511.0" />
+            <TextArea fx:id="outD" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="224.0" prefWidth="38.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="inPut1" prefHeight="26.0" prefWidth="9.0" />
+            <TextField fx:id="inPut2" />
+            <TextField fx:id="inPut3" />
+            <TextField fx:id="inPut4" />
+            <TextField fx:id="inPut5" />
+            <TextField fx:id="inPut6" />
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
